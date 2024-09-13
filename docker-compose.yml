@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  express-app:
+    build: .
+    image: raspy-controller
+    # Use the host network mode
+    network_mode: 'host'
+    environment:
+      mac_address: ''
+      NODE_ENV: production
+    restart: always
+    command: ['node', 'dist/server.js']
