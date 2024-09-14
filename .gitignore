@@ -1,0 +1,34 @@
+# Node.js dependencies
+/node_modules
+
+# Yarn lock file
+yarn-error.log
+
+# TypeScript compiled JavaScript files
+/dist
+
+# Local environment variables
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+*.log
+*.csv
+*.pid
+*.seed
+*.pid.lock
+
+# Editor & IDE specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Linux
+*.swp
+
