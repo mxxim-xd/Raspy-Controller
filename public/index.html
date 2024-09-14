@@ -63,9 +63,8 @@
           alert(data);
 
           for (let i = 0; i < 60; i++) {
-            const state = await requestState();
-
             if (state === 'ON') break;
+            const state = await requestState();
 
             setTimeout(() => {}, 1000);
           }
