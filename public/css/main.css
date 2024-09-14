@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212; /* Dark background for the whole page */
+  color: #e0e0e0; /* Light text color for contrast */
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #f5f5f5; /* Slightly lighter text color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for text readability */
+}
+
+/* Button Styles */
+button {
+  background: #333; /* Dark background for the button */
+  border: none;
+  border-radius: 8px;
+  width: 75%;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background: #555; /* Slightly lighter background on hover */
+  transform: scale(1.05);
+}
+
+/* Button Active Effect */
+button:active {
+  background: #444; /* Even darker background when pressed */
+  transform: scale(0.95);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
