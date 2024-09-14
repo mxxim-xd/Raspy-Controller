@@ -63,8 +63,8 @@
           alert(data);
 
           for (let i = 0; i < 60; i++) {
-            if (state === 'ON') break;
             const state = await requestState();
+            if (state === 'ON') break;
 
             setTimeout(() => {}, 1000);
           }
