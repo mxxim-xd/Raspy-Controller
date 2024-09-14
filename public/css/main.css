@@ -3,8 +3,8 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: #121212; /* Dark background for the whole page */
-  color: #e0e0e0; /* Light text color for contrast */
+  background: #121212 !important; /* Dark background for the whole page */
+  color: #e0e0e0 !important; /* Light text color for contrast */
   text-align: center;
   display: grid;
   justify-content: center;
@@ -20,29 +20,21 @@ h1 {
 }
 
 /* Button Styles */
-button {
-  background: #333; /* Dark background for the button */
+.wake-btn {
+  background: #333;
   border: none;
   border-radius: 8px;
-  width: 75%;
+  width: 100%;
   color: #fff;
   font-size: 1.2rem;
   padding: 12px 24px;
   cursor: pointer;
   outline: none;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.5s ease, transform 0.5s ease;
 }
 
-/* Button Hover Effect */
-button:hover {
-  background: #555; /* Slightly lighter background on hover */
-  transform: scale(1.05);
-}
-
-/* Button Active Effect */
-button:active {
-  background: #444; /* Even darker background when pressed */
-  transform: scale(0.95);
+.status-btn {
+  margin-top: 1rem;
 }
 
 /* Animation */

@@ -7,9 +7,10 @@ const PORT = 3000;
 
 // Get the MAC address from the environment variable
 const macAddress = process.env.mac_address;
+const ipAddress = process.env.ip_address;
 
-if (!macAddress) {
-  console.error('MAC address is not set in the environment.');
+if (!macAddress || !ipAddress) {
+  console.error('MAC address or IP address is not set in the environment.');
   process.exit(1); // Exit the application if no MAC address is provided
 }
 
@@ -28,9 +29,20 @@ app.post('/wake', (req, res) => {
       console.error(`Error executing command: ${error}`);
       return res.status(500).send('Failed to send wake-on-LAN command.');
     }
-
-    console.log(`Command output: ${stdout}`);
     res.send('Wake-on-LAN command sent!');
+  });
+});
+
+// GET route to check the state
+app.get('/state', (req, res) => {
+  exec(`ping -w 3 ${ipAddress}`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error executing command: ${error}`);
+      return res.send('OFF');
+    }
+
+    if (stdout.includes('64 bytes from')) res.send('ON');
+    else res.send('OFF');
   });
 });
 

@@ -10,9 +10,9 @@ COPY package.json yarn.lock ./
 # Install dependencies
 RUN yarn install
 
-# Install wakeonlan
+# Install wakeonlan and ping (iputils-ping)
 RUN apt-get update && \
-    apt-get install -y wakeonlan && \
+    apt-get install -y wakeonlan iputils-ping && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy the rest of the application code into the container
