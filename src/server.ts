@@ -35,7 +35,7 @@ app.post('/wake', (req, res) => {
 
 // GET route to check the state
 app.get('/state', (req, res) => {
-  exec(`ping -w 1 ${ipAddress}`, (error, stdout, stderr) => {
+  exec(`ping -w 3 ${ipAddress}`, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error executing command: ${error}`);
       return res.send('OFF');
