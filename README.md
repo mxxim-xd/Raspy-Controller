@@ -1,4 +1,4 @@
-# Wake-on-LAN Web Application
+# Raspy-Controller
 
 This project is a simple web-based application for remotely waking up a computer using the **Wake-on-LAN (WoL)** protocol.
 
@@ -11,7 +11,7 @@ This project is a simple web-based application for remotely waking up a computer
 ## Requirements
 
 - **Docker** and **Docker Compose**
-- A computer that is on the same local network as the server.
+- A computer (e.g., a Raspberry Pi) that is on the same local network as the server.
 
 ## Environment Variables
 
